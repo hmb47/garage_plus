@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{vehicle_type} ({organ_code}) {performance}",
+ "creation": "2024-03-12 21:48:46.548175",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_type",
+  "section_break_kswd",
+  "body_style",
+  "read_only_car_manufacturer",
+  "model",
+  "organ_code",
+  "column_break_yjvq",
+  "tecdoc_type",
+  "engine",
+  "performance",
+  "column_break_ppuj",
+  "gearbox",
+  "front_axle_section",
+  "have_front_axle",
+  "front_axle",
+  "column_break_yqxt",
+  "have_rear_axle",
+  "rear_axle",
+  "column_break_wxur",
+  "have_transfer_gear",
+  "transfer_gear"
+ ],
+ "fields": [
+  {
+   "fieldname": "model",
+   "fieldtype": "Link",
+   "label": "Model",
+   "options": "Models",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yjvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "have_rear_axle",
+   "fieldtype": "Check",
+   "label": "Rear Axle"
+  },
+  {
+   "default": "0",
+   "fieldname": "have_front_axle",
+   "fieldtype": "Check",
+   "label": "Front Axle"
+  },
+  {
+   "fieldname": "body_style",
+   "fieldtype": "Link",
+   "label": "Body Style",
+   "options": "Organ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "engine",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Engine",
+   "options": "Organ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "performance",
+   "fieldtype": "Data",
+   "label": "Performance"
+  },
+  {
+   "fieldname": "front_axle_section",
+   "fieldtype": "Section Break",
+   "label": "Axle"
+  },
+  {
+   "fieldname": "column_break_ppuj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gearbox",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gearbox",
+   "options": "Organ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yqxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wxur",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.have_front_axle;",
+   "fieldname": "front_axle",
+   "fieldtype": "Link",
+   "label": "Front Axle",
+   "mandatory_depends_on": "eval:doc.have_front_axle;",
+   "options": "Organ"
+  },
+  {
+   "depends_on": "eval:doc.have_rear_axle;",
+   "fieldname": "rear_axle",
+   "fieldtype": "Link",
+   "label": "Rear Axle",
+   "mandatory_depends_on": "eval:doc.have_rear_axle;",
+   "options": "Organ"
+  },
+  {
+   "default": "0",
+   "fieldname": "have_transfer_gear",
+   "fieldtype": "Check",
+   "label": "Transfer Gear"
+  },
+  {
+   "depends_on": "eval:doc.have_transfer_gear;",
+   "fieldname": "transfer_gear",
+   "fieldtype": "Link",
+   "label": "Transfer Gear",
+   "mandatory_depends_on": "eval:doc.have_transfer_gear;",
+   "options": "Organ"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Data",
+   "label": "Vehicle Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_kswd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "body_style.organ_code",
+   "fetch_if_empty": 1,
+   "fieldname": "organ_code",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Organ Code"
+  },
+  {
+   "fieldname": "tecdoc_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "TecDoc Type No"
+  },
+  {
+   "fetch_from": "model.car_manufacturer",
+   "fetch_if_empty": 1,
+   "fieldname": "read_only_car_manufacturer",
+   "fieldtype": "Read Only",
+   "label": "Car Manufacturer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-20 09:21:08.168447",
+ "modified_by": "Administrator",
+ "module": "Garage Plus",
+ "name": "Vehicle type",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

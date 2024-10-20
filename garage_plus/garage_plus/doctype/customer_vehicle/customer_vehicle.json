@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-02 05:40:34.943245",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_owner",
+  "mobile",
+  "notes",
+  "nom_client",
+  "wilaya",
+  "column_break_vtno",
+  "immatriculation",
+  "vin",
+  "vehicle",
+  "naming_series",
+  "constructeur",
+  "donn\u00e9es_du_v\u00e9hicule_tab",
+  "moteur",
+  "bv",
+  "essieu_avant",
+  "essieu_arri\u00e8re",
+  "bo\u00eete_de_transfert"
+ ],
+ "fields": [
+  {
+   "fieldname": "immatriculation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Immatriculation",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "vehicle_owner",
+   "fieldtype": "Link",
+   "label": "Propri\u00e9taire",
+   "options": "GP Contacts",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vin",
+   "unique": 1
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "V\u00e9hicule",
+   "options": "Vehicle type"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fetch_from": "vehicle_owner.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Read Only",
+   "label": "Mobile"
+  },
+  {
+   "fetch_from": "vehicle_owner.wilaya",
+   "fieldname": "wilaya",
+   "fieldtype": "Read Only",
+   "label": "Wilaya"
+  },
+  {
+   "fieldname": "column_break_vtno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "donn\u00e9es_du_v\u00e9hicule_tab",
+   "fieldtype": "Tab Break",
+   "label": "Donn\u00e9es du v\u00e9hicule"
+  },
+  {
+   "fetch_from": "vehicle.engine",
+   "fieldname": "moteur",
+   "fieldtype": "Link",
+   "label": "Moteur",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.gearbox",
+   "fieldname": "bv",
+   "fieldtype": "Link",
+   "label": "B.V",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle_owner.contact_name",
+   "fieldname": "nom_client",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Nom Client"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fetch_from": "vehicle.front_axle",
+   "fieldname": "essieu_avant",
+   "fieldtype": "Link",
+   "label": "Essieu Avant",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.rear_axle",
+   "fieldname": "essieu_arri\u00e8re",
+   "fieldtype": "Link",
+   "label": "Essieu Arri\u00e8re",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.transfer_gear",
+   "fieldname": "bo\u00eete_de_transfert",
+   "fieldtype": "Link",
+   "label": "Bo\u00eete de transfert",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.read_only_car_manufacturer",
+   "fieldname": "constructeur",
+   "fieldtype": "Read Only",
+   "label": "Constructeur"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "GP Repair Order",
+   "link_fieldname": "ro_vh_owner"
+  }
+ ],
+ "make_attachments_public": 1,
+ "modified": "2024-09-24 14:22:25.087128",
+ "modified_by": "Administrator",
+ "module": "Garage Plus",
+ "name": "Customer vehicle",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "nom_client, mobile, immatriculation, vin, vehicle",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nom_client",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

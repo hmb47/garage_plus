@@ -1,0 +1,173 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"J5e03QTxBF\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\"><b>Garage Plus</b></span>\",\"col\":12}},{\"id\":\"U0erIM0ifx\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\" style=\\\"font-weight: normal;\\\"><i>Ordre de r\u00e9paration</i></span><br>\",\"col\":12}},{\"id\":\"7OfOKmKv-b\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tous les OR\",\"col\":3}},{\"id\":\"2MItp9NBFB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rendez-Vous\",\"col\":3}},{\"id\":\"N5sP1n3Lok\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Re\u00e7u & En cours\",\"col\":3}},{\"id\":\"NG0IXssj_r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livr\u00e9 & Archiv\u00e9\",\"col\":3}},{\"id\":\"p__1Y8_tJF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"RDV in Calendar\",\"col\":3}},{\"id\":\"JaI0ycLZUH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"B4fBbOTIwa\",\"type\":\"card\",\"data\":{\"card_name\":\"V\u00e9hicules\",\"col\":4}},{\"id\":\"j4Dmdv1frA\",\"type\":\"card\",\"data\":{\"card_name\":\"Param\u00e8tre\",\"col\":4}}]",
+ "creation": "2024-03-17 21:50:55.355046",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "getting-started",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Garage Plus",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Param\u00e8tre",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contacts",
+   "link_count": 0,
+   "link_to": "GP Contacts",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Wilaya",
+   "link_count": 0,
+   "link_to": "GP Wilaya",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Organs",
+   "link_count": 0,
+   "link_to": "Organ",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "V\u00e9hicules",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "V\u00e9hicules clients",
+   "link_count": 0,
+   "link_to": "Customer vehicle",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Constructeur automobile",
+   "link_count": 0,
+   "link_to": "Car Manufacturer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Mod\u00e8le de v\u00e9hicules",
+   "link_count": 0,
+   "link_to": "Models",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Types de v\u00e9hicules",
+   "link_count": 0,
+   "link_to": "Vehicle type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attestations de service fait",
+   "link_count": 0,
+   "link_to": "GP Attestation SF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-10-16 13:11:53.103798",
+ "modified_by": "Administrator",
+ "module": "Garage Plus",
+ "name": "Garage Plus",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Orange",
+   "doc_view": "Kanban",
+   "kanban_board": "Rendez-vous OR Kanban",
+   "label": "Rendez-Vous",
+   "link_to": "GP Repair Order",
+   "stats_filter": "[[\"GP Repair Order\",\"status\",\"in\",[\"Demander RDV\",\"RDV Attribu\u00e9\",\"RDV Confirm\u00e9\",\"RDV Annuler\",null],false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "Kanban",
+   "format": "{}",
+   "kanban_board": "In Progress OR Kanban",
+   "label": "Re\u00e7u & En cours",
+   "link_to": "GP Repair Order",
+   "stats_filter": "[[\"GP Repair Order\",\"status\",\"in\",[\"Re\u00e7u\",\"En cours\",\"Contr\u00f4le de qualit\u00e9\",\"Pr\u00eat\",null],false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "Kanban",
+   "kanban_board": "All OR Kanban",
+   "label": "Tous les OR",
+   "link_to": "GP Repair Order",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "RDV in Calendar",
+   "type": "URL",
+   "url": "https://sprinter47.com/app/gp-repair-order/view/calendar/RDV%20OR%20Calendar"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "Kanban",
+   "kanban_board": "Delivered OR Kanban",
+   "label": "Livr\u00e9 & Archiv\u00e9",
+   "link_to": "GP Repair Order",
+   "stats_filter": "[[\"GP Repair Order\",\"status\",\"in\",[\"Livr\u00e9\",null],false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Garage Plus"
+}

@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-03-18 06:34:01.451429",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contact_name",
+  "mobile",
+  "wilaya",
+  "address_commune",
+  "code_wilaya",
+  "naming_series",
+  "column_break_hstl",
+  "is_customer",
+  "is_shipment_company",
+  "destination",
+  "active",
+  "notes",
+  "section_autre_contacts",
+  "autre_contacts"
+ ],
+ "fields": [
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_customer",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Client"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_shipment_company",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Transporteur, Taxieur"
+  },
+  {
+   "fieldname": "contact_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Nom"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "wilaya",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Wilaya",
+   "options": "GP Wilaya"
+  },
+  {
+   "fetch_from": "wilaya.code_wilya",
+   "fetch_if_empty": 1,
+   "fieldname": "code_wilaya",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Code Wilaya"
+  },
+  {
+   "fieldname": "column_break_hstl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address_commune",
+   "fieldtype": "Data",
+   "label": "Address (Commune)"
+  },
+  {
+   "fieldname": "autre_contacts",
+   "fieldtype": "Table",
+   "label": "Autre contacts",
+   "options": "Line GP Contacts"
+  },
+  {
+   "fieldname": "section_autre_contacts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Mobile"
+  },
+  {
+   "depends_on": "eval:doc.is_shipment_company;",
+   "fieldname": "destination",
+   "fieldtype": "Data",
+   "label": "Destination"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": " Naming Series"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Order Tracking",
+   "link_fieldname": "client"
+  },
+  {
+   "link_doctype": "Customer vehicle",
+   "link_fieldname": "vehicle_owner"
+  }
+ ],
+ "modified": "2024-04-20 20:23:02.721942",
+ "modified_by": "Administrator",
+ "module": "Garage Plus",
+ "name": "GP Contacts",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "contact_name, mobile",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "contact_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

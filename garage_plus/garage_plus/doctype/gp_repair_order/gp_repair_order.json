@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-03 06:28:28.511067",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ro_vh_owner",
+  "column_break_ryqh",
+  "data_driver",
+  "data_mobile",
+  "section_break_agdf",
+  "status",
+  "date_rdv",
+  "mobile",
+  "notes_client",
+  "nom_client",
+  "key_nember",
+  "naming_series",
+  "column_break_joet",
+  "kilom\u00e9trage",
+  "immatriculation",
+  "vin",
+  "v\u00e9hicule",
+  "constructeur",
+  "column_break_xzga",
+  "moteur",
+  "bv",
+  "link_mmql",
+  "essieu_arri\u00e8re",
+  "boite_de_transfert",
+  "section_break_ojzd",
+  "tasks"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "ro_vh_owner",
+   "fieldtype": "Link",
+   "label": "Propri\u00e9taire",
+   "options": "Customer vehicle"
+  },
+  {
+   "fetch_from": "ro_vh_owner.nom_client",
+   "fetch_if_empty": 1,
+   "fieldname": "nom_client",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Nom Client"
+  },
+  {
+   "fieldname": "column_break_joet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ro_vh_owner.immatriculation",
+   "fetch_if_empty": 1,
+   "fieldname": "immatriculation",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Immatriculation"
+  },
+  {
+   "fetch_from": "ro_vh_owner.vin",
+   "fetch_if_empty": 1,
+   "fieldname": "vin",
+   "fieldtype": "Read Only",
+   "in_preview": 1,
+   "label": "Vin"
+  },
+  {
+   "fetch_from": "ro_vh_owner.vehicle",
+   "fieldname": "v\u00e9hicule",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "V\u00e9hicule"
+  },
+  {
+   "fieldname": "column_break_xzga",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kilom\u00e9trage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Kilom\u00e9trage",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fetch_from": "ro_vh_owner.bv",
+   "fieldname": "bv",
+   "fieldtype": "Link",
+   "label": "B.V",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ro_vh_owner.notes",
+   "fetch_if_empty": 1,
+   "fieldname": "notes_client",
+   "fieldtype": "Read Only",
+   "label": "Notes Client"
+  },
+  {
+   "fieldname": "section_break_ojzd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Text Editor",
+   "label": "T\u00e2ches \u00e0 accomplir"
+  },
+  {
+   "fetch_from": "ro_vh_owner.moteur",
+   "fieldname": "moteur",
+   "fieldtype": "Link",
+   "label": "Moteur",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ro_vh_owner.essieu_avant",
+   "fetch_if_empty": 1,
+   "fieldname": "link_mmql",
+   "fieldtype": "Link",
+   "label": "Essieu Avant",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ro_vh_owner.essieu_arri\u00e8re",
+   "fetch_if_empty": 1,
+   "fieldname": "essieu_arri\u00e8re",
+   "fieldtype": "Link",
+   "label": "Essieu Arri\u00e8re",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ro_vh_owner.bo\u00eete_de_transfert",
+   "fieldname": "boite_de_transfert",
+   "fieldtype": "Link",
+   "label": "Boite de transfert",
+   "options": "Organ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Demander RDV\nRDV Attribu\u00e9\nRDV Confirm\u00e9\nRe\u00e7u\nEn cours\nContr\u00f4le de qualit\u00e9\nPr\u00eat\nLivr\u00e9\nRDV Annuler"
+  },
+  {
+   "fieldname": "date_rdv",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date RDV",
+   "mandatory_depends_on": "eval:doc.status==\"RDV Confirm\u00e9\";"
+  },
+  {
+   "bold": 1,
+   "columns": 1,
+   "fieldname": "key_nember",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Key N\u00b0",
+   "options": "\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60"
+  },
+  {
+   "fetch_from": "ro_vh_owner.mobile",
+   "fetch_if_empty": 1,
+   "fieldname": "mobile",
+   "fieldtype": "Read Only",
+   "in_preview": 1,
+   "label": "Mobile"
+  },
+  {
+   "fetch_from": "ro_vh_owner.constructeur",
+   "fetch_if_empty": 1,
+   "fieldname": "constructeur",
+   "fieldtype": "Read Only",
+   "label": "Constructeur"
+  },
+  {
+   "fieldname": "section_break_agdf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ryqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.ro_vh_owner ==\"CV24-0000\"",
+   "fieldname": "data_driver",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Conducteur",
+   "mandatory_depends_on": "eval:doc.ro_vh_owner ==\"CV24-0000\""
+  },
+  {
+   "depends_on": "eval:doc.ro_vh_owner ==\"CV24-0000\"",
+   "fieldname": "data_mobile",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Mobile",
+   "mandatory_depends_on": "eval:doc.ro_vh_owner ==\"CV24-0000\""
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2024-10-20 11:19:45.123844",
+ "modified_by": "Administrator",
+ "module": "Garage Plus",
+ "name": "GP Repair Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_preview_popup": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nom_client",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

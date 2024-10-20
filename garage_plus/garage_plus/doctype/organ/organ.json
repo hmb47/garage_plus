@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{organ} | {organ_code}",
+ "creation": "2024-03-15 20:47:20.763321",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_nkks",
+  "organ_specification_column",
+  "car_manufacturer",
+  "organ_code",
+  "organ",
+  "gearbox_type",
+  "body_style",
+  "column_break_qwkg",
+  "oil_type",
+  "capacity_l",
+  "maintenance_interval_km",
+  "column_break_fjfp",
+  "fuel_type",
+  "cylinders",
+  "capacity",
+  "valves"
+ ],
+ "fields": [
+  {
+   "fieldname": "organ",
+   "fieldtype": "Select",
+   "label": "Organ",
+   "options": "M\nB.V\nB.T\nE.AV\nE.AR\nC",
+   "set_only_once": 1,
+   "sort_options": 1
+  },
+  {
+   "fieldname": "organ_code",
+   "fieldtype": "Data",
+   "label": "Organ Code"
+  },
+  {
+   "depends_on": "eval:doc.organ==\"Bo\u00eete de vitesses\";",
+   "fieldname": "gearbox_type",
+   "fieldtype": "Select",
+   "label": "Gearbox Type",
+   "options": "Manuel\nAutomatique\nSemi-automatique"
+  },
+  {
+   "depends_on": "eval:doc.organ!==\"C\";",
+   "fieldname": "oil_type",
+   "fieldtype": "Data",
+   "label": "Oil Type"
+  },
+  {
+   "depends_on": "eval:doc.organ!==\"C\";",
+   "fieldname": "maintenance_interval_km",
+   "fieldtype": "Int",
+   "label": "Maintenance interval (km)"
+  },
+  {
+   "depends_on": "eval:doc.organ==\"Moteur\";",
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "label": "Fuel type",
+   "options": "Diesel\nEssence\n\u00c9lectrique\nDiesel hybride\nEssence hybride"
+  },
+  {
+   "depends_on": "eval:doc.organ!==\"C\";",
+   "fieldname": "capacity_l",
+   "fieldtype": "Float",
+   "label": "Capacity (L)"
+  },
+  {
+   "depends_on": "eval:doc.organ==\"Moteur\";",
+   "fieldname": "cylinders",
+   "fieldtype": "Select",
+   "label": "Cylinders",
+   "options": "\n3 en ligne\n4 en ligne\n5 en ligne\n6 en ligne\n6 en V\n8 en V\n10 en V\n12 en V"
+  },
+  {
+   "depends_on": "eval:doc.organ==\"Moteur\";",
+   "fieldname": "valves",
+   "fieldtype": "Data",
+   "label": "Valves"
+  },
+  {
+   "fieldname": "section_break_nkks",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qwkg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fjfp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.organ==\"Chassis\";",
+   "fieldname": "body_style",
+   "fieldtype": "Select",
+   "label": "Body Style",
+   "options": "Berlines\nBreak\nCoup\u00e9\nLimousines\nCabriolets\nSUV\nPick-up\nFourgonnettes\nFourgon\nMinibus\nBus\nCamion\nCamion Tracteur\nRemorque",
+   "sort_options": 1
+  },
+  {
+   "depends_on": "eval:doc.organ==\"Moteur\";",
+   "fieldname": "capacity",
+   "fieldtype": "Data",
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "organ_specification_column",
+   "fieldtype": "Column Break",
+   "label": "Organ Specification"
+  },
+  {
+   "fieldname": "car_manufacturer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Car Manufacturer",
+   "options": "Car Manufacturer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Customer vehicle",
+   "link_fieldname": "moteur"
+  },
+  {
+   "link_doctype": "Vehicle type",
+   "link_fieldname": "vehicle_type"
+  }
+ ],
+ "modified": "2024-10-01 08:28:23.816009",
+ "modified_by": "Administrator",
+ "module": "Garage Plus",
+ "name": "Organ",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

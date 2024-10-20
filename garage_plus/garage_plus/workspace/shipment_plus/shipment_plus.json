@@ -1,0 +1,123 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"RZ65uzi1Tu\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\" style=\\\"\\\">Quick Access</span><br>\",\"col\":12}},{\"id\":\"7x_KKbin7U\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Nouvelles commandes\",\"col\":3}},{\"id\":\"9m3ls-NIOd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commande confirm\u00e9e\",\"col\":3}},{\"id\":\"HaiRT_TvCM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"En pr\u00e9paration\",\"col\":3}},{\"id\":\"-iZHUK3yIm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pr\u00eat pour l'exp\u00e9dition\",\"col\":3}},{\"id\":\"fey1tDqya0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Exp\u00e9di\u00e9\",\"col\":3}},{\"id\":\"w7K3f5wOOa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livr\u00e9\",\"col\":3}},{\"id\":\"ayMtFVrWoP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Annuler\",\"col\":3}},{\"id\":\"KQHfDKNDat\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h70A1ABjlj\",\"type\":\"card\",\"data\":{\"card_name\":\"Setting\",\"col\":4}}]",
+ "creation": "2024-03-18 21:31:34.321954",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "stock",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Shipment Plus",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setting",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contacts",
+   "link_count": 0,
+   "link_to": "GP Contacts",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Order Tracking",
+   "link_count": 0,
+   "link_to": "Order Tracking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-04-16 21:36:46.467851",
+ "modified_by": "Administrator",
+ "module": "Garage Plus",
+ "name": "Shipment Plus",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "format": "{} \u274c",
+   "label": "Annuler",
+   "link_to": "Order Tracking",
+   "stats_filter": "[[\"Order Tracking\",\"status\",\"=\",\"Annuler\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} \ud83d\uded2\ud83d\udcb8\ud83d\udcb0",
+   "label": "Nouvelles commandes",
+   "link_to": "Order Tracking",
+   "stats_filter": "[[\"Order Tracking\",\"status\",\"=\",\"Nouvelles commandes\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} \ud83d\ude9b",
+   "label": "Exp\u00e9di\u00e9",
+   "link_to": "Order Tracking",
+   "stats_filter": "[[\"Order Tracking\",\"status\",\"=\",\"Exp\u00e9di\u00e9\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} \u2714\ufe0f",
+   "label": "Commande confirm\u00e9e",
+   "link_to": "Order Tracking",
+   "stats_filter": "[[\"Order Tracking\",\"status\",\"=\",\"Commande confirm\u00e9e\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} Success \ud83c\udfaf",
+   "label": "Livr\u00e9",
+   "link_to": "Order Tracking",
+   "stats_filter": "[[\"Order Tracking\",\"status\",\"=\",\"Livr\u00e9\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "format": "{} \ud83d\udee0\ufe0f\ud83d\udce6",
+   "label": "En pr\u00e9paration",
+   "link_to": "Order Tracking",
+   "stats_filter": "[[\"Order Tracking\",\"status\",\"=\",\"En pr\u00e9paration\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} \u27a1 \ud83d\ude9b",
+   "label": "Pr\u00eat pour l'exp\u00e9dition",
+   "link_to": "Order Tracking",
+   "stats_filter": "[[\"Order Tracking\",\"status\",\"=\",\"Pr\u00eat pour l'exp\u00e9dition\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Shipment Plus"
+}
